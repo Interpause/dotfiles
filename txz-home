@@ -1,0 +1,2 @@
+#!/bin/sh
+tar c /backup/jh2xl | xz -T0 -v9e -M90% > /backup/$(date +%Y%m%d).txz

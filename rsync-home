@@ -1,0 +1,2 @@
+#!/bin/sh
+rsync -a --delete --delete-excluded --info=progress2 --exclude-from="/home/jh2xl/Applications/scripts/backup-exclude" /home/jh2xl/ /backup/jh2xl
