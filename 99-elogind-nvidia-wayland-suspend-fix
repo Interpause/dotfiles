@@ -2,13 +2,34 @@
 # Taken from https://forums.developer.nvidia.com/t/trouble-suspending-with-510-39-01-linux-5-16-0-freezing-of-tasks-failed-after-20-009-seconds/200933/12
 # Modified using https://wiki.gentoo.org/wiki/Elogind
 _SHELL="kwin_wayland"
+# case "${1-}" in
+#     'pre')
+#         killall -STOP $_SHELL
+# 	;;
+# 
+#     'post')
+#         killall -CONT $_SHELL
+# 	;;
+# 
+#     *)
+#         exit 64
+# 	;;
+# esac
+# Solution above didn't work
+# Below is my own solution after understanding the problem
 case "${1-}" in
     'pre')
-        killall -STOP $_SHELL
+        nvidia-smi -pm=0
+        modprobe -r nvidia_drm
+        modprobe -r nvidia_modeset
+        modprobe -r nvidia
 	;;
 
     'post')
-        killall -CONT $_SHELL
+        modprobe nvidia
+        modprobe nvidia_modeset
+        modprobe nvidia_drm
+        nvidia-smi -pm=1
 	;;
 
     *)
