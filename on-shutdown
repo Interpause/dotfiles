@@ -2,4 +2,5 @@
 # insert things to do on shutdown
 # such as gracefully exiting chromium
 killall chrome
+killall firefox
 killall onedrive
