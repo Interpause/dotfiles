@@ -373,11 +373,11 @@ src_install() {
 	# Plugin Manifest
 	insinto /usr/lib64/mozilla/native-messaging-hosts
 	newins manifests/linux.json firefoxpwa.json
-	dosym ../../../lib64/mozilla/native-messaging-hosts/firefowpwa.json /usr/lib/mozilla/native-messaging-hosts/firefowpwa.json
+	dosym ../../../lib64/mozilla/native-messaging-hosts/firefoxpwa.json /usr/lib/mozilla/native-messaging-hosts/firefoxpwa.json
 
 	# Shell Completions
 	exeinto /usr/share/bash-completion/completions
-	newexe target/${TARGET_DIR}/completions/firefoxpwa.bash firefowpwa
+	newexe target/${TARGET_DIR}/completions/firefoxpwa.bash firefoxpwa
 	exeinto /usr/share/fish/vendor_completions.d
 	doexe target/${TARGET_DIR}/completions/firefoxpwa.fish
 	exeinto /usr/share/zsh/vendor-completions
