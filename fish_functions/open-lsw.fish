@@ -3,5 +3,5 @@ function open-lsw --description 'Open Linux Subsystem for Windows'
     up-vm
   end
   virsh --connect qemu:///system start win11
-  looking-glass-client -F -m KEY_RIGHTCTRL
+  looking-glass-client
 end
