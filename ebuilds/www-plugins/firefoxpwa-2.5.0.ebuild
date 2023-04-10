@@ -329,11 +329,11 @@ src_prepare() {
 
 	# Set version in source files as per build instructions
 	sed -i "s/version = \"0.0.0\"/version = \"${PV}\"/g" Cargo.toml || die
-	sed -i "s/DISTRIBUTION_VERSION = '0.0.0'/DISTRIBUTION_VERSION = '${PV}'/g" userchrome/profile/chrome/pwa/chrome.jsm || die
+	sed -i "s/DISTRIBUTION_VERSION = '0.0.0'/DISTRIBUTION_VERSION = '${PV}'/g" \
+		userchrome/profile/chrome/pwa/chrome.jsm || die
 }
 
 src_configure() {
-	# TODO: figure out exact problematic flags (curse having a non-standard system...)
 	strip-flags
 
 	export CARGO_PROFILE_release_LTO=$(usex lto true false)
@@ -366,7 +366,8 @@ src_install() {
 	# Plugin Manifest
 	insinto /usr/lib64/mozilla/native-messaging-hosts
 	newins manifests/linux.json firefoxpwa.json
-	dosym ../../../lib64/mozilla/native-messaging-hosts/firefoxpwa.json /usr/lib/mozilla/native-messaging-hosts/firefoxpwa.json
+	dosym ../../../lib64/mozilla/native-messaging-hosts/firefoxpwa.json \
+		/usr/lib/mozilla/native-messaging-hosts/firefoxpwa.json
 
 	# Shell Completions
 	exeinto /usr/share/bash-completion/completions
@@ -377,11 +378,10 @@ src_install() {
 	doexe target/${TARGET_DIR}/completions/_firefoxpwa
 
 	# Documentation
-	insinto /usr/share/doc/${PF}
-	doins ../README.md
-	newins ../native/README.md README-NATIVE.md
-	newins ../extension/README.md README-EXTENSION.md
-	doins packages/deb/copyright
+	dodoc ../README.md
+	newdoc ../native/README.md README-NATIVE.md
+	newdoc ../extension/README.md README-EXTENSION.md
+	dodoc packages/deb/copyright
 
 	# UserChrome
 	insinto /usr/share/firefoxpwa
