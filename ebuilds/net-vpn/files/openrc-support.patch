@@ -1,0 +1,43 @@
+diff --git a/etc/init.d/warp-svc b/etc/init.d/warp-svc
+new file mode 100644
+index 0000000..ed331a5
+--- /dev/null
++++ b/etc/init.d/warp-svc
+@@ -0,0 +1,11 @@
++#!/sbin/openrc-run
++
++name=$RC_SVCNAME
++description="Cloudflare Zero Trust Client Daemon"
++supervisor="supervise-daemon"
++command="/bin/warp-svc"
++command_args=""
++
++depend() {
++	need net 
++}
+diff --git a/etc/xdg/autostart/com.cloudflare.WarpTaskbar.desktop b/etc/xdg/autostart/com.cloudflare.WarpTaskbar.desktop
+index c482825..9eba21d 100644
+--- a/etc/xdg/autostart/com.cloudflare.WarpTaskbar.desktop
++++ b/etc/xdg/autostart/com.cloudflare.WarpTaskbar.desktop
+@@ -3,7 +3,7 @@ Type=Application
+ Version=1.2
+ Name=Cloudflare Zero Trust
+ Comment=View the current status of the Zero Trust Tunnel
+-Exec=systemctl --user start warp-taskbar
++Exec=warp-taskbar
+ StartupNotify=false
+ Keywords=warp teams cloudflare vpn
+ Icon=zero-trust
+diff --git a/usr/share/applications/com.cloudflare.WarpTaskbar.desktop b/usr/share/applications/com.cloudflare.WarpTaskbar.desktop
+index c482825..9eba21d 100644
+--- a/usr/share/applications/com.cloudflare.WarpTaskbar.desktop
++++ b/usr/share/applications/com.cloudflare.WarpTaskbar.desktop
+@@ -3,7 +3,7 @@ Type=Application
+ Version=1.2
+ Name=Cloudflare Zero Trust
+ Comment=View the current status of the Zero Trust Tunnel
+-Exec=systemctl --user start warp-taskbar
++Exec=warp-taskbar
+ StartupNotify=false
+ Keywords=warp teams cloudflare vpn
+ Icon=zero-trust
