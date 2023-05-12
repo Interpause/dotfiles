@@ -7,5 +7,5 @@ command="/bin/warp-svc"
 command_args=""
 
 depend() {
-	need net 
+	need net
 }

@@ -26,7 +26,7 @@ src_install() {
 	dobin bin/warp-svc
 	doinitd ${FILESDIR}/warp-svc
 	systemd_dounit opt/cloudflare-warp/warp-svc.service
-	
+
 	if use systray; then
 		dobin bin/warp-taskbar
 		systemd_douserunit usr/lib/systemd/user/warp-taskbar.service
