@@ -1,2 +1,3 @@
 #!/bin/sh
 onedrive --monitor &
+SSH_ASKPASS=/usr/bin/ksshaskpass ssh-add $(find ~/.ssh -name "id*" -type f ! -name "*.*") </dev/null
