@@ -144,10 +144,10 @@ CRATES="
 	num_cpus-1.15.0
 	num_threads-0.1.6
 	once_cell-1.17.0
-	openssl-0.10.48
+	openssl-0.10.55
 	openssl-macros-0.1.0
 	openssl-probe-0.1.5
-	openssl-sys-0.9.83
+	openssl-sys-0.9.90
 	os_str_bytes-6.4.1
 	owned_ttf_parser-0.17.1
 	parse-display-0.8.0
