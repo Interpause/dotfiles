@@ -24,7 +24,7 @@ symbol = " "
 format = "|[$symbol]($style)"
 
 [directory]
-read_only = " "
+read_only = " "
 format = "[$read_only]($read_only_style)[$path]($style)"
 read_only_style = "bright-yellow"
 
@@ -85,7 +85,7 @@ symbol = " "
 format = "|[$symbol]($style)"
 
 [memory_usage]
-symbol = " "
+symbol = "󰍛 "
 format = "|$symbol[$ram( | $swap)]($style)"
 
 [meson]
@@ -93,7 +93,7 @@ symbol = "喝 "
 format = "|[$symbol]($style)"
 
 [nim]
-symbol = " "
+symbol = " "
 format = "|[$symbol]($style)"
 
 [nix_shell]
@@ -101,7 +101,7 @@ symbol = " "
 format = "|[$symbol$state( \\($name\\))]($style)"
 
 [nodejs]
-symbol = " "
+symbol = "󰎙 "
 format = "|[$symbol]($style)"
 
 [os]
@@ -121,10 +121,10 @@ Emscripten = " "
 EndeavourOS = " "
 Fedora = " "
 FreeBSD = " "
-Garuda = "﯑ "
+Garuda = "? "
 Gentoo = " "
-HardenedBSD = "ﲊ "
-Illumos = " "
+HardenedBSD = "? "
+Illumos = " "
 Linux = " "
 # Mabox = " "
 Macos = " "
@@ -134,22 +134,22 @@ MidnightBSD = " "
 Mint = " "
 NetBSD = " "
 NixOS = " "
-OpenBSD = " "
+OpenBSD = " "
 openSUSE = " "
-OracleLinux = " "
+OracleLinux = "? "
 Pop = " "
 Raspbian = " "
 Redhat = " "
 RedHatEnterprise = " "
 Redox = " "
-Solus = "ﴱ "
+Solus = " "
 SUSE = " "
 Ubuntu = " "
-Unknown = " "
-Windows = " "
+Unknown = "? "
+Windows = " "
 
 [package]
-symbol = " "
+symbol = " "
 format = "|[$symbol]($style)"
 disabled = true
 
@@ -158,11 +158,11 @@ disabled = true
 # format = "|[$symbol$channel]($style)"
 
 [python]
-symbol = " "
+symbol = " "
 format = "(|[$symbol$virtualenv]($style))"
 
 [rlang]
-symbol = "ﳒ "
+symbol = " "
 format = "|[$symbol]($style)"
 
 [ruby]
@@ -203,7 +203,7 @@ format = "|[$symbol]($style)"
 format = "|[$symbol]($style)"
 
 [dotnet]
-format = "|[$symbol(🎯 $tfm )]($style)"
+format = "|[$symbol(󰓾 $tfm )]($style)"
 
 [erlang]
 format = "|[$symbol]($style)"
