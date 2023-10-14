@@ -4,5 +4,5 @@ function open-lsw --description 'Open Linux Subsystem for Windows'
     sleep 1
   end
   virsh --connect qemu:///system start win11 || true
-  nohup looking-glass-client &
+  nohup looking-glass-client >/dev/null 2>&1 &
 end
