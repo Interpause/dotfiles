@@ -5,7 +5,7 @@ EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
 # see sys-kernel/gentoo-sources for appropiate version
-K_GENPATCHES_VER="64"
+K_GENPATCHES_VER="66"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 K_NODRYRUN="1"
