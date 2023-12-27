@@ -5,13 +5,14 @@ EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
 # see sys-kernel/gentoo-sources for appropiate version
-K_GENPATCHES_VER="74"
+K_GENPATCHES_VER="77"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 K_NODRYRUN="1"
 
 inherit kernel-2
 detect_version
+detect_arch
 
 DESCRIPTION="Full XanMod sources including the Gentoo patchset"
 HOMEPAGE="https://xanmod.org"
@@ -28,6 +29,7 @@ SRC_URI="
 "
 
 src_unpack() {
+	UNIPATCH_STRICTORDER=1
 	UNIPATCH_LIST_DEFAULT=""
 	UNIPATCH_LIST="${UNIPATCH_LIST} ${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz "
 	# exclude minor kernel revision patches; XanMod handles them already
