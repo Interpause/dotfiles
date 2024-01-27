@@ -1,5 +1,5 @@
 format = "$character"
-right_format = "$all$username$hostname"
+right_format = "$cmd_duration$all$username$hostname"
 add_newline = false
 
 [aws]
@@ -188,7 +188,7 @@ format = "|[$symbol]($style)"
 format = "|[$symbol]($style)"
 
 [cmd_duration]
-format = "|[$duration]($style)"
+format = "[$duration]($style)|"
 
 [cobol]
 format = "|[$symbol]($style)"
