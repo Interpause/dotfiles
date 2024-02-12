@@ -1,0 +1,6 @@
+sys-devel/binutils pgo
+# lto pgo not needed for compatibility + makes build take way longer
+sys-devel/gcc graphite lto pgo
+sys-devel/clang-common default-compiler-rt default-lld llvm-libunwind
+dev-vcs/git -perl PYTHON_SINGLE_TARGET: -*
+sys-libs/llvm-libunwind static-libs

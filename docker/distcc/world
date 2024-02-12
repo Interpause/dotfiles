@@ -1,0 +1,4 @@
+dev-vcs/git
+sys-devel/clang
+sys-devel/gcc
+sys-devel/distcc
