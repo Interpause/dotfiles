@@ -13,10 +13,12 @@ LICENSE="all-rights-reserved"
 RESTRICT="bindist mirror"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="systemd +systray"
-RDEPEND="net-firewall/nftables"
+IUSE="systemd +systray +dex"
+RDEPEND="net-firewall/nftables
+	dex? ( net-libs/libpcap )
+"
 
-QA_PREBUILT="/bin/warp-cli /bin/warp-diag /bin/warp-svc /bin/warp-taskbar"
+QA_PREBUILT="/bin/warp-cli /bin/warp-dex /bin/warp-diag /bin/warp-svc /bin/warp-taskbar"
 
 S="${WORKDIR}"
 
@@ -27,11 +29,14 @@ src_unpack() {
 src_install() {
 	into /
 	dobin bin/warp-cli
-	dobin bin/warp-dex
 	dobin bin/warp-diag
 	dobin bin/warp-svc
-	doinitd ${FILESDIR}/warp-svc
+	doinitd "${FILESDIR}/warp-svc"
 	systemd_dounit lib/systemd/system/warp-svc.service
+
+	if use dex; then
+		dobin bin/warp-dex
+	fi
 
 	if use systray; then
 		dobin bin/warp-taskbar
@@ -41,10 +46,10 @@ src_install() {
 		insinto /usr/share/warp/images
 		doins $(ls usr/share/warp/images/*.png)
 
-		desktopfile=$(\
+		desktopfile=$( \
 			usex systemd \
 			usr/share/applications/com.cloudflare.WarpTaskbar.desktop \
-			${FILESDIR}/com.cloudflare.WarpTaskbar.desktop\
+			"${FILESDIR}/com.cloudflare.WarpTaskbar.desktop" \
 		)
 		domenu $desktopfile
 
