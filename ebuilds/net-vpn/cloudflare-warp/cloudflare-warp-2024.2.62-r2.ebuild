@@ -13,7 +13,7 @@ LICENSE="all-rights-reserved"
 RESTRICT="bindist mirror"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="systemd +systray +dex"
+IUSE="systemd +systray dex"
 RDEPEND="net-firewall/nftables
 	dex? ( net-libs/libpcap )
 "
@@ -34,6 +34,7 @@ src_install() {
 	doinitd "${FILESDIR}/warp-svc"
 	systemd_dounit lib/systemd/system/warp-svc.service
 
+	# warp-dex relies on "libpcap.so.0.8" which is not in tree.
 	if use dex; then
 		dobin bin/warp-dex
 	fi
