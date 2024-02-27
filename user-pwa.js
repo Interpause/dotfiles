@@ -79,7 +79,7 @@ user_pref("doh-rollout.disable-heuristics", true);
 // user_pref("browser.contentblocking.category", "strict");
 user_pref("privacy.annotate_channels.strict_list.enabled", true);
 user_pref("privacy.donottrackheader.enabled", true);
-user_pref("privacy.partition.network_state.ocsp_cache", true);
+// user_pref("privacy.partition.network_state.ocsp_cache", true);
 user_pref("privacy.purge_trackers.date_in_cookie_database", "0");
 user_pref("privacy.query_stripping.enabled", true);
 user_pref("privacy.query_stripping.enabled.pbmode", true);
