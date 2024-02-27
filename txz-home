@@ -1,2 +1,2 @@
 #!/bin/sh
-tar c /backup/jh2xl | xz -T0 -v9e -M90% > /backup/$(date +%Y%m%d).txz
+XZ_OPT="-v9e -T0 -M70%" tar -cJf /backup/$(date +%Y%m%d).txz /backup/jh2xl

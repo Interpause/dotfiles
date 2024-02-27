@@ -1,5 +1,6 @@
-// See https://kb.mozillazine.org/User.js_file about this config files
-// Copy to ~/.local/share/firefoxpwa/profiles/*/user.js as a preset
+// See https://kb.mozillazine.org/User.js_file about this config file
+// Copy to: ~/.local/share/firefoxpwa/templates/custom/user.js
+// Copy to: ~/.local/share/firefoxpwa/profiles/*/user.js
 
 // WebRTC Audio Post-processing
 // there are cases where you don't want to process the audio, or handle it yourself alr
@@ -57,6 +58,7 @@ user_pref("network.ssl_tokens_cache_capacity", 32768);
 user_pref("browser.cache.disk.metadata_memory_limit", 15360);
 user_pref("browser.sessionstore.resume_from_crash", false);
 // user_pref("browser.sessionstore.interval", 60000);
+user_pref("network.http.rcwn.enabled", false);
 
 // Misc
 user_pref("extensions.pocket.enabled", false); // only way to disable Pocket
