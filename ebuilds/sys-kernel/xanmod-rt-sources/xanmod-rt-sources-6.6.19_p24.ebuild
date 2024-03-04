@@ -5,7 +5,7 @@ EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
 # see sys-kernel/gentoo-sources for appropiate version
-K_GENPATCHES_VER="24"
+K_GENPATCHES_VER="25"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 K_NODRYRUN="1"
@@ -37,15 +37,6 @@ src_unpack() {
 	kernel-2_src_unpack
 }
 
-
-src_prepare() {
-	default
-
-	# 627796
-	sed \
-		"s/default PREEMPT_NONE/default PREEMPT_RT/g" \
-		-i "${S}/kernel/Kconfig.preempt" || die "sed failed"
-}
 
 pkg_postinst() {
 	elog "The XanMod team strongly suggests the use of updated CPU microcodes with its"
