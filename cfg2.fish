@@ -6,3 +6,20 @@ end
 
 set -g fish_greeting ""
 set -g fish_handle_reflow 1
+
+if command -q fd
+  and command -q fzf
+  set -gx FZF_CTRL_T_COMMAND "fd --type f -u --strip-cwd-prefix --color=always"
+  set -gx FZF_DEFAULT_COMMAND "fd --type f -u --strip-cwd-prefix --color=always"
+  set -gx FZF_DEFAULT_OPTS "--ansi"
+  fzf --fish | source
+end 
+
+if command -q starship
+  starship init fish | source
+end
+
+if command -q zoxide
+  zoxide init fish | source
+end
+
