@@ -96,4 +96,6 @@ user_pref("signon.rememberSignons", false);
 user_pref("layout.frame_rate", 165);
 // Conflicts with KDE Plasma Browser Integration
 user_pref("media.hardwaremediakeys.enabled", false);
+// Some websites remove functionality if using Firefox. Looking at you, MS Teams.
+// user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0");
 
