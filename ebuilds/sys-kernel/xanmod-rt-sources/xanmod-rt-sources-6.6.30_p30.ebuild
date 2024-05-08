@@ -5,7 +5,7 @@ EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
 # see sys-kernel/gentoo-sources for appropiate version
-K_GENPATCHES_VER="31"
+K_GENPATCHES_VER="37"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 K_NODRYRUN="1"
@@ -25,7 +25,7 @@ XANMOD_VERSION="1"
 RT_PATCHSET="${PV/*_p}"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
-	mirror://sourceforge/xanmod/patch-${OKV}-rt${RT_PATCHSET}-xanmod${XANMOD_VERSION}.xz
+	https://downloads.sourceforge.net/xanmod/patch-${OKV}-rt${RT_PATCHSET}-xanmod${XANMOD_VERSION}.xz
 	${GENPATCHES_URI}
 "
 
