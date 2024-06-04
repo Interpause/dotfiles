@@ -6,10 +6,10 @@ EAPI=8
 inherit cmake xdg
 
 DESCRIPTION="Tiling window management script for Kwin"
-HOMEPAGE="https://github.com/Bismuth-Forge/bismuth"
+HOMEPAGE="https://github.com/Interpause/bismuth"
 SRC_URI="
-	https://github.com/Bismuth-Forge/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/Bismuth-Forge/bismuth/releases/download/v${PV}/binary-release.tar.gz -> ${P}-binary-release.tar.gz
+	https://github.com/Interpause/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/Interpause/bismuth/releases/download/v${PV}/binary-release.tar.gz -> ${P}-binary-release.tar.gz
 "
 
 LICENSE="CC-BY-4.0 LGPL-3+ MIT"
@@ -45,7 +45,7 @@ src_prepare() {
 	cmake_src_prepare
 }
 
-src_configuire() {
+src_configure() {
 	# cmake calls git describe --tags --abbrev=0
 	# let's just echo expected output, e.g. v1.2.3
 	git() { echo "v${PV}" ; }
