@@ -11,7 +11,7 @@ if command -q fd
   and command -q fzf
   set -gx FZF_CTRL_T_COMMAND "fd --type f -u --strip-cwd-prefix --color=always"
   set -gx FZF_DEFAULT_COMMAND "fd --type f -u --strip-cwd-prefix --color=always"
-  set -gx FZF_DEFAULT_OPTS "--ansi"
+  set -gx FZF_DEFAULT_OPTS "--ansi --tmux"
   fzf --fish | source
 end 
 
@@ -22,4 +22,3 @@ end
 if command -q zoxide
   zoxide init fish | source
 end
-
