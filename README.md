@@ -1,6 +1,6 @@
 # sh-scripts
 
-Backup of shell scripts used on my Gentoo Laptop'21.
+Backup of shell scripts used on my Gentoo Laptop'21. I should really rename this to dotfiles at some point.
 
 ## Contents
 
