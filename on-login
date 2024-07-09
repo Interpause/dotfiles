@@ -1,3 +1,6 @@
 #!/bin/sh
 onedrive --monitor &
-SSH_ASKPASS=/usr/bin/ksshaskpass ssh-add $(find ~/.ssh -name "id*" -type f ! -name "*.*") </dev/null
+SSH_ASKPASS=/usr/bin/ksshaskpass ssh-add $(find ~/.ssh -name "id*" -type f ! -name "*.*") </dev/null &
+ln -sf $XDG_RUNTIME_DIR/.flatpak/dev.vencord.Vesktop/xdg-run/discord-ipc-0 $XDG_RUNTIME_DIR/discord-ipc-0
+mkdir -p $XDG_RUNTIME_DIR/app/com.discordapp.Discord
+ln -sf $XDG_RUNTIME_DIR/.flatpak/dev.vencord.Vesktop/xdg-run/discord-ipc-0 $XDG_RUNTIME_DIR/app/com.discordapp.Discord/discord-ipc-0
