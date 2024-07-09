@@ -3,6 +3,5 @@ sys-devel/clang:17
 sys-devel/clang:18
 sys-devel/gcc
 sys-devel/distcc
-sys-libs/glibc
 sys-devel/binutils
 
