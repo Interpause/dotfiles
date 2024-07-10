@@ -1,0 +1,15 @@
+services:
+  perforce:
+    build:
+      context: .
+    restart: unless-stopped
+    volumes:
+      - ./p4dctl.conf.d:/etc/perforce/p4dctl.conf.d
+      - ./perforce-data:/perforce-data
+      - ./dbs:/dbs
+    shm_size: 4G
+    environment:
+      P4PORT: 80
+      P4ROOT: /perforce-data
+    ports:
+      - 80:80
