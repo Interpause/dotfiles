@@ -1,0 +1,13 @@
+services:
+  minecraft:
+    build:
+      context: .
+    container_name: minecraft
+    user: minecraft
+    ports:
+      - 25565:25565
+    command: /server/startserver.sh
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./server:/server
