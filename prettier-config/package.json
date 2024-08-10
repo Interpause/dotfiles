@@ -1,0 +1,13 @@
+{
+  "name": "@interpause/prettier-config",
+  "version": "1.0.0",
+  "description": "My prettier config but versioned.",
+  "main": "index.json",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Interpause/dotfiles.git",
+    "directory": "prettier-config"
+  },
+  "author": "John-Henry Lim <hyphen@interpause.dev>",
+  "license": "MIT"
+}
