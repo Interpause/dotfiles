@@ -58,6 +58,7 @@ user_pref("network.http.rcwn.enabled", false);
 
 // Misc
 // user_pref("extensions.pocket.enabled", false); // only way to disable Pocket
+// user_pref("identity.fxaccounts.enabled", false); // disable Firefox Sync
 user_pref("browser.preferences.experimental", true); // enable tab in about:preferences
 user_pref("extensions.pictureinpicture.enable_picture_in_picture_overrides", true);
 user_pref("media.videocontrols.picture-in-picture.improved-video-controls.enabled", true);
