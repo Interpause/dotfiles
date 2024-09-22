@@ -9,6 +9,18 @@
 tab-item.unread {
   font-style: italic !important;
 }
+tab-item .label-content {
+  color: white;
+}
+tab-item.discarded .label-content {
+  opacity: 0.65;
+}
+#tabbar-container {
+  background-color: #222;
+}
+#subpanel-container {
+  background-color: #222;
+}
 
 /* https://github.com/piroor/treestyletab/wiki/Code-snippets-for-custom-style-rules#full-auto-showhide-theme */
 /* Hide border on tab bar, force its state to 'scroll', hide scrollbar. */
@@ -31,6 +43,8 @@ tab-item.unread {
 }
 tab-item .background {
   margin: 0 0 0 -0.15em;
+  box-shadow: none !important;
+  border: 0 !important;
 }
 
 /* Hide .twisty and use icon as twisty instead. */
@@ -42,8 +56,9 @@ tab-item tab-twisty {
   z-index: 10000;
 }
 /* Don't overlap twisty. */
+/* Actually set it to 0; overlap seems to be a glitch, hovering causing indent to trigger and it to be correct for some reason. */
 tab-item .extra-items-container {
-  margin-left: 2em;
+  margin-left: 0px;
 }
 /* This is also needed for TST 4.0.1 and later */
 tab-item tab-item-substance .ui {
